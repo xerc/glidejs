@@ -89,6 +89,13 @@ export default function (Glide, Components, Events) {
   })
 
   /**
+   * Avoid `margin` if requested
+   */
+  if(0 === this.value) {
+    return Gaps
+  }
+  
+  /**
    * Apply calculated gaps:
    * - after building, so slides (including clones) will receive proper margins
    * - on updating via API, to recalculate gaps with new options
